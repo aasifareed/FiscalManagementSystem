@@ -134,14 +134,13 @@
           <table class="table table-hover text-nowrap" [busy]="isTableLoading">
             <thead class="bg-light">
               <tr>
-                <th>{{ "UserName" | localize }}</th>
+                <th>{{ "Benutzername" | localize }}</th>
                 <th>{{ "FullName" | localize }}</th>
-                <th>{{ "EmailAddress" | localize }}</th>
+                <th>{{ "E-Mail" | localize }}</th>
                 <th>{{ "Age" | localize }}</th>
-                <th>{{ "Sex" | localize }}</th>
                 <th>{{ "License Number" | localize }}</th>
                 <th>{{ "IsActive" | localize }}</th>
-                <th style="width: 310px;">{{ "Actions" | localize }}</th>
+                <th style="width: 310px">{{ "Actions" | localize }}</th>
               </tr>
             </thead>
             <tbody>
@@ -161,7 +160,6 @@
                 <td>{{ user.fullName }}</td>
                 <td>{{ user.emailAddress }}</td>
                 <td>{{ user.age }}</td>
-                <td>{{ user.sex }}</td>
                 <td>{{ user.licenseNumber }}</td>
                 <td>
                   <div class="custom-control custom-checkbox">

@@ -14,11 +14,9 @@ namespace FiscalManagementSystem.Users.Dto
         [StringLength(AbpUserBase.MaxUserNameLength)]
         public string UserName { get; set; }
 
-        [Required]
         [StringLength(AbpUserBase.MaxNameLength)]
         public string Name { get; set; }
 
-        [Required]
         [StringLength(AbpUserBase.MaxSurnameLength)]
         public string Surname { get; set; }
 
@@ -32,6 +30,17 @@ namespace FiscalManagementSystem.Users.Dto
         public string Age { get; set; }
 
         public string Sex { get; set; }
+
+
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Adress { get; set; }
+        public int Postcode { get; set; }
+        public string City { get; set; }
+        public string Country { get; set; }
+        public string Phone { get; set; }
+        public string CellNumber { get; set; }
+
 
         public bool IsActive { get; set; }
 

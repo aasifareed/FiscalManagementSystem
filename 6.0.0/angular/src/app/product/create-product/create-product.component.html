@@ -1,0 +1,164 @@
+<form
+  class="form-horizontal"
+  autocomplete="off"
+  #createProdcutModal="ngForm"
+  (ngSubmit)="save()"
+>
+  <abp-modal-header
+    [title]="'Create New Product' | localize"
+    (onCloseClick)="bsModalRef.hide()"
+  ></abp-modal-header>
+  <div class="modal-body">
+    <tabset>
+      <tab [heading]="'Product Details' | localize" class="pt-3 px-2">
+        <div class="form-group row required">
+          <label class="col-md-3 col-form-label" for="name">
+            {{ "Name" | localize }}
+          </label>
+          <div class="col-md-9">
+            <input
+              type="text"
+              class="form-control"
+              name="name"
+              id="name"
+              required
+              [(ngModel)]="product.name"
+              #nameModel="ngModel"
+              #nameEl
+            />
+            <abp-validation-summary
+              [control]="nameModel"
+              [controlEl]="nameEl"
+            ></abp-validation-summary>
+          </div>
+        </div>
+
+        <div class="form-group row required">
+          <label class="col-md-3 col-form-label" for="brand">
+            {{ "Brand" | localize }}
+          </label>
+          <div class="col-md-9">
+            <input
+              type="text"
+              class="form-control"
+              name="brand"
+              id="brand"
+              required
+              maxlength="32"
+              [(ngModel)]="product.brand"
+              #brandModel="ngModel"
+              #brandEl
+            />
+            <abp-validation-summary
+              [control]="brandModel"
+              [controlEl]="brandEl"
+            ></abp-validation-summary>
+          </div>
+        </div>
+
+        <div class="form-group row required">
+          <label class="col-md-3 col-form-label" for="color">
+            {{ "Color" | localize }}
+          </label>
+          <div class="col-md-9">
+            <input
+              type="text"
+              class="form-control"
+              name="color"
+              id="color"
+              required
+              [(ngModel)]="product.color"
+              #colorModel="ngModel"
+              #colorEl
+            />
+            <abp-validation-summary
+              [control]="colorModel"
+              [controlEl]="colorEl"
+            ></abp-validation-summary>
+          </div>
+        </div>
+
+        <div class="form-group row required">
+          <label class="col-md-3 col-form-label" for="price">
+            {{ "Price" | localize }}
+          </label>
+          <div class="col-md-9">
+            <input
+              type="number"
+              class="form-control"
+              name="price"
+              id="price"
+              required
+              [(ngModel)]="product.price"
+              #priceModel="ngModel"
+              #priceEl
+            />
+            <abp-validation-summary
+              [control]="priceModel"
+              [controlEl]="priceEl"
+            ></abp-validation-summary>
+          </div>
+        </div>
+
+        <div class="form-group row required">
+          <label class="col-md-3 col-form-label" for="quantity">
+            {{ "Quantity" | localize }}
+          </label>
+          <div class="col-md-9">
+            <input
+              type="number"
+              class="form-control"
+              name="quantity"
+              id="quantity"
+              required
+              [(ngModel)]="product.quantity"
+              #quantityModel="ngModel"
+              #quantityEl
+            />
+            <abp-validation-summary
+              [control]="quantityModel"
+              [controlEl]="quantityEl"
+            ></abp-validation-summary>
+          </div>
+        </div>
+
+        <div class="form-group row required">
+          <label class="col-md-3 col-form-label" for="productCatagoryId">
+            {{ "Product CatagoryId" | localize }}
+          </label>
+          <div class="col-md-9">
+            <select
+              name="productCatagoryId"
+              [(ngModel)]="product.productCatagoryId"
+              class="form-control"
+            >
+              <option selected>Select Catagory</option>
+              <option
+                *ngFor="let productCatagory of productCatagories"
+                [value]="productCatagory.productCatagoryId"
+              >
+                {{ productCatagory.name }}
+              </option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group row required">
+          <label class="col-md-3 col-form-label" for="quantity">
+            {{ "Product Image" | localize }}
+          </label>
+          <div class="col-md-9">
+            <input type="file" name="file" (change)="uploadFile($event)" />
+
+            <img *ngIf="imageSrc" id="blah" [src]="imageSrc" alt="your image" />
+          </div>
+        </div>
+      </tab>
+    </tabset>
+  </div>
+  <abp-modal-footer
+    [cancelDisabled]="saving"
+    [saveDisabled]="!createProdcutModal.form.valid || saving"
+    (onCancelClick)="bsModalRef.hide()"
+  ></abp-modal-footer>
+</form>

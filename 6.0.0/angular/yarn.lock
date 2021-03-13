@@ -128,6 +128,15 @@
   dependencies:
     tslib "^2.0.0"
 
+"@angular/cdk@^11.2.3":
+  version "11.2.3"
+  resolved "https://registry.yarnpkg.com/@angular/cdk/-/cdk-11.2.3.tgz#e4e0cba88a0db469bfd6e52d1c964461358215da"
+  integrity sha512-QehBMt36nNfXZ8nBGJLLUQlexzQv6rohQmEYXULHarAC3Ily8DnB9wDGJ4emlKyGz1MIVYR0tZP39RmQp0hH+g==
+  dependencies:
+    tslib "^2.0.0"
+  optionalDependencies:
+    parse5 "^5.0.0"
+
 "@angular/cli@^10.2.0":
   version "10.2.0"
   resolved "https://registry.yarnpkg.com/@angular/cli/-/cli-10.2.0.tgz#b0b465120eb9a39e5efd030bf80c023c630960ed"
@@ -6659,6 +6668,11 @@ parse5@6.0.1, parse5@^6.0.1:
   resolved "https://registry.yarnpkg.com/parse5/-/parse5-6.0.1.tgz#e1a1c085c569b3dc08321184f19a39cc27f7c30b"
   integrity sha512-Ofn/CTFzRGTTxwpNEs9PP93gXShHcTq255nzRYSKe8AkVpZY7e1fpmTfOyoIvjP5HG7Z2ZM7VS9PPhQGW2pOpw==
 
+parse5@^5.0.0:
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/parse5/-/parse5-5.1.1.tgz#f68e4e5ba1852ac2cadc00f4555fff6c2abb6178"
+  integrity sha512-ugq4DFI0Ptb+WWjAdOK16+u/nHfiIrcE+sh8kZMaM0WllQKLI9rOUq6c2b7cwPkXdzfQESqvoqK6ug7U/Yyzug==
+
 parseqs@0.0.5:
   version "0.0.5"
   resolved "https://registry.yarnpkg.com/parseqs/-/parseqs-0.0.5.tgz#d5208a3738e46766e291ba2ea173684921a8b89d"
@@ -7213,6 +7227,18 @@ prepend-http@^1.0.0:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-1.0.4.tgz#d4f4562b0ce3696e41ac52d0e002e57a635dc6dc"
   integrity sha1-1PRWKwzjaW5BrFLQ4ALlemNdxtw=
+
+primeicons@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/primeicons/-/primeicons-4.1.0.tgz#19eaef8ef5594b0006358ae64e738d03e167c9bb"
+  integrity sha512-uEv2pSPk1zQCfaB2VgnUfnUxxlGryYi+5rbdxmZBBt5v9S/pscIQYS5YDLxsQZ7D9jn5c76+Tx5wX/2J1nK6sA==
+
+primeng@^11.3.0-rc.1:
+  version "11.3.0-rc.1"
+  resolved "https://registry.yarnpkg.com/primeng/-/primeng-11.3.0-rc.1.tgz#fcc50dc1fab2b05c9a4fbece48a2bbd49ad825a4"
+  integrity sha512-1w61xBlIvrUXiss1kh+Th8x95r/aL2dCHWuHzPP5ciFifmONtXHcyMNRedlSjoVc7D2Oqo55IiaXBAaDRV+wnQ==
+  dependencies:
+    tslib "^2.0.0"
 
 private@^0.1.8:
   version "0.1.8"

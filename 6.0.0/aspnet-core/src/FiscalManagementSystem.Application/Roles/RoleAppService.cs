@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Abp.Application.Services;
 using Abp.Application.Services.Dto;
@@ -136,12 +137,20 @@ namespace FiscalManagementSystem.Roles
             var grantedPermissions = (await _roleManager.GetGrantedPermissionsAsync(role)).ToArray();
             var roleEditDto = ObjectMapper.Map<RoleEditDto>(role);
 
-            return new GetRoleForEditOutput
+            GetRoleForEditOutput getRoleForEditOutput = new GetRoleForEditOutput();
+
+            getRoleForEditOutput.Role = roleEditDto;
+            getRoleForEditOutput.Permissions = ObjectMapper.Map<List<FlatPermissionDto>>(permissions).OrderBy(p => p.DisplayName).ToList();
+            getRoleForEditOutput.GrantedPermissionNames = grantedPermissions.Select(p => p.Name).ToList();
+
+            foreach (var Permission in getRoleForEditOutput.Permissions)
             {
-                Role = roleEditDto,
-                Permissions = ObjectMapper.Map<List<FlatPermissionDto>>(permissions).OrderBy(p => p.DisplayName).ToList(),
-                GrantedPermissionNames = grantedPermissions.Select(p => p.Name).ToList()
-            };
+                Permission.DisplayName = Permission.DisplayName.Replace("[", "");
+                Permission.DisplayName = Permission.DisplayName.Replace("]", "");
+            }
+            
+            return getRoleForEditOutput;
+
         }
     }
 }

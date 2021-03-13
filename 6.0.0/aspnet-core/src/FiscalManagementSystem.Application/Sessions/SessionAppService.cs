@@ -1,12 +1,15 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Abp.Auditing;
+using Abp.Domain.Repositories;
+using FiscalManagementSystem.Authorization.Users;
 using FiscalManagementSystem.Sessions.Dto;
 
 namespace FiscalManagementSystem.Sessions
 {
     public class SessionAppService : FiscalManagementSystemAppServiceBase, ISessionAppService
     {
+
         [DisableAuditing]
         public async Task<GetCurrentLoginInformationsOutput> GetCurrentLoginInformations()
         {

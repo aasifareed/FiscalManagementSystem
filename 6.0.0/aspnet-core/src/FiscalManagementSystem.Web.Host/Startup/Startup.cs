@@ -18,6 +18,8 @@ using Abp.Dependency;
 using Abp.Json;
 using Microsoft.OpenApi.Models;
 using Newtonsoft.Json.Serialization;
+using Abp.PlugIns;
+using System.IO;
 
 namespace FiscalManagementSystem.Web.Host.Startup
 {
@@ -49,7 +51,6 @@ namespace FiscalManagementSystem.Web.Host.Startup
                     NamingStrategy = new CamelCaseNamingStrategy()
                 };
             });
-
 
 
             IdentityRegistrar.Register(services);
@@ -123,6 +124,7 @@ namespace FiscalManagementSystem.Web.Host.Startup
 
             app.UseCors(_defaultCorsPolicyName); // Enable CORS!
 
+            app.UseDefaultFiles();
             app.UseStaticFiles();
 
             app.UseRouting();

@@ -9,6 +9,14 @@ namespace FiscalManagementSystem.Authorization.Users
     {
         public const string DefaultPassword = "123qwe";
 
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Adress { get; set; }
+        public int Postcode { get; set; }
+        public string City { get; set; }
+        public string Country { get; set; }
+        public string Phone { get; set; }
+        public string CellNumber { get; set; }
         public string LicenseNumber { get; set; }
         public string Age { get; set; }
         public string Sex { get; set; }

@@ -43,7 +43,7 @@ export class SidebarMenuComponent extends AppComponentBase implements OnInit {
 
   getMenuItems(): MenuItem[] {
     return [
-    
+
       new MenuItem(this.l('HomePage'), '/app/home', 'fas fa-home'),
       new MenuItem(
         this.l('Tenants'),
@@ -74,29 +74,36 @@ export class SidebarMenuComponent extends AppComponentBase implements OnInit {
       ),
 
 
-      
+
       new MenuItem('Stammdaten', '', 'fas fa-dot-circle', '', [
         new MenuItem(
           'Benutzer',
-          'https://aspnetboilerplate.com?ref=abptmpl',
-          'far fa-circle'
+          '/app/users',
+          'fas fa-users',
+          'Pages.Users'
         ),
         new MenuItem(
           'Fahrzeug',
-          'https://aspnetboilerplate.com/Templates?ref=abptmpl',
-          'far fa-circle'
+          '/app/vehicle',
+          'fas fa-users',
         ),
 
         new MenuItem(
           'Produkte',
-          'https://aspnetboilerplate.com?ref=abptmpl',
-          'far fa-circle'
+          '/app/product',
+          'fas fa-users',
+        ),
+        new MenuItem(
+          'Sale',
+          '/app/sale',
+          'fas fa-users',
         ),
         new MenuItem(
           'Produktkategorie',
-          'https://aspnetboilerplate.com/Templates?ref=abptmpl',
-          'far fa-circle'
+          '/app/product-catagory',
+          'fas fa-users',
         ),
+
 
         new MenuItem(
           'Steuer',
@@ -157,7 +164,7 @@ export class SidebarMenuComponent extends AppComponentBase implements OnInit {
 
       ]),
 
-      
+
 
       new MenuItem(
         this.l('Desription of Items'),

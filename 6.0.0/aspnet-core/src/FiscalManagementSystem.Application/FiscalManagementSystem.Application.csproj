@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <VersionPrefix>1.0.0.0</VersionPrefix>
     <TargetFramework>net5.0</TargetFramework>
@@ -10,6 +10,9 @@
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
     <RootNamespace>FiscalManagementSystem</RootNamespace>
   </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Products\Dto\GetAllProductForSaleDto.cs~RF911bf3.TMP" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FiscalManagementSystem.Core\FiscalManagementSystem.Core.csproj" />
   </ItemGroup>

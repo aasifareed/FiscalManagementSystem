@@ -58,6 +58,9 @@ namespace FiscalManagementSystem.Users
 
             var user = ObjectMapper.Map<User>(input);
 
+            user.Name = user.FirstName + " " + user.LastName;
+            user.Surname = user.FirstName + " " + user.LastName;
+
             user.TenantId = AbpSession.TenantId;
             user.IsEmailConfirmed = true;
 

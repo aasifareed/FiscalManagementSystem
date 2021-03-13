@@ -38,6 +38,19 @@ import { SidebarComponent } from './layout/sidebar.component';
 import { SidebarLogoComponent } from './layout/sidebar-logo.component';
 import { SidebarUserPanelComponent } from './layout/sidebar-user-panel.component';
 import { SidebarMenuComponent } from './layout/sidebar-menu.component';
+import { VehicleComponent } from './vehicle/vehicle.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CreateVehicleDialogComponent } from './vehicle/create-vehicle/create-vehicle-dialog/create-vehicle-dialog.component';
+import { EditVehicleDialogComponent } from './vehicle/edit-vehicle/edit-vehicle-dialog/edit-vehicle-dialog.component';
+import { ProductCatagoryComponent } from './product-catagory/product-catagory.component';
+import { CreatProductCatagoryComponent } from './product-catagory/creat-product-catagory/creat-product-catagory.component';
+import { EditProductCatagoryComponent } from './product-catagory/edit-product-catagory/edit-product-catagory.component';
+import { ProductComponent } from './product/product.component';
+import { CreateProductComponent } from './product/create-product/create-product.component';
+import { EditProductComponent } from './product/edit-product/edit-product.component';
+import { OrderComponent } from './product/order/order.component';
+
+
 
 @NgModule({
   declarations: [
@@ -58,6 +71,13 @@ import { SidebarMenuComponent } from './layout/sidebar-menu.component';
     EditUserDialogComponent,
     ChangePasswordComponent,
     ResetPasswordDialogComponent,
+
+
+    // Vehicle
+    VehicleComponent,
+    CreateVehicleDialogComponent,
+    EditVehicleDialogComponent,
+
     // layout
     HeaderComponent,
     HeaderLeftNavbarComponent,
@@ -67,7 +87,14 @@ import { SidebarMenuComponent } from './layout/sidebar-menu.component';
     SidebarComponent,
     SidebarLogoComponent,
     SidebarUserPanelComponent,
-    SidebarMenuComponent
+    SidebarMenuComponent,
+    ProductCatagoryComponent,
+    CreatProductCatagoryComponent,
+    EditProductCatagoryComponent,
+    ProductComponent,
+    CreateProductComponent,
+    EditProductComponent,
+    OrderComponent,
   ],
   imports: [
     CommonModule,
@@ -98,4 +125,4 @@ import { SidebarMenuComponent } from './layout/sidebar-menu.component';
     ResetPasswordDialogComponent,
   ],
 })
-export class AppModule {}
+export class AppModule { }

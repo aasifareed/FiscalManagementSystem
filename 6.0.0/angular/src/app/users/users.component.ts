@@ -113,6 +113,8 @@ export class UsersComponent extends PagedListingComponentBase<UserDto> {
         CreateUserDialogComponent,
         {
           class: 'modal-lg',
+          backdrop: 'static',
+          keyboard: false
         }
       );
     } else {
@@ -120,6 +122,8 @@ export class UsersComponent extends PagedListingComponentBase<UserDto> {
         EditUserDialogComponent,
         {
           class: 'modal-lg',
+          backdrop: 'static',
+          keyboard: false,
           initialState: {
             id: id,
           },
